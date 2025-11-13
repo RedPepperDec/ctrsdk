@@ -1,13 +1,12 @@
 cmake_minimum_required(VERSION 3.24)
-set(CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/ARMCC.cmake)
+
+set(CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/project/ARMCC.cmake)
+include(${CMAKE_SOURCE_DIR}/project/Toolchain.cmake)
+set_toolchain()
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 project(ctrsdk C CXX)
-
-if (NOT WIN32)
-    set_compilers()
-endif()
 
 if (WIN32)
     set(LOCALE_FLAG --locale=japanese)

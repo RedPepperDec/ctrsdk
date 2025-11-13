@@ -1,3 +1,6 @@
 [submodule "lib/nnsdk"]
 	branch = main
 	update = merge
+[submodule "project"]
+	path = project
+	url = https://github.com/RedPepperDec/RedPepper_Meta
